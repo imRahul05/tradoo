@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export const TextHoverEffect = ({
   text,
@@ -49,11 +49,11 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#eab308" />
-              <stop offset="25%" stopColor="#ef4444" />
-              <stop offset="50%" stopColor="#3b82f6" />
-              <stop offset="75%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#8b5cf6" />
+              <stop offset="0%" stopColor="rgb(234 179 8)" /> {/* yellow-500 */}
+              <stop offset="25%" stopColor="rgb(239 68 68)" /> {/* red-500 */}
+              <stop offset="50%" stopColor="rgb(59 130 246)" /> {/* blue-500 */}
+              <stop offset="75%" stopColor="rgb(6 182 212)" /> {/* cyan-500 */}
+              <stop offset="100%" stopColor="rgb(139 92 246)" /> {/* violet-500 */}
             </>
           )}
         </linearGradient>
@@ -62,17 +62,8 @@ export const TextHoverEffect = ({
           id="revealMask"
           gradientUnits="userSpaceOnUse"
           r="20%"
-          initial={{ cx: "50%", cy: "50%" }}
           animate={maskPosition}
           transition={{ duration: duration ?? 0, ease: "easeOut" }}
-
-          // example for a smoother animation below
-
-          //   transition={{
-          //     type: "spring",
-          //     stiffness: 300,
-          //     damping: 50,
-          //   }}
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
@@ -93,7 +84,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
+        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -104,7 +95,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
+        className="font-[helvetica] font-bold fill-transparent text-7xl stroke-neutral-200 dark:stroke-neutral-800"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -125,7 +116,7 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-7xl font-bold"
+        className="font-[helvetica] font-bold fill-transparent text-7xl"
       >
         {text}
       </text>
