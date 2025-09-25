@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { LucideIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { AnimatedThemeToggler } from "./animated-theme-toggler"
 
 interface NavItem {
   name: string
@@ -79,6 +80,10 @@ export function NavBar({ items, className }: NavBarProps) {
             </Link>
           )
         })}
+       
+       <div className="pl-3 border-l border-border flex centre px-2">
+         <AnimatedThemeToggler/>
+       </div>
       </div>
     </div>
   )
