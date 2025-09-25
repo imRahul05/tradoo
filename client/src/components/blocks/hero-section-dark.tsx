@@ -94,9 +94,18 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   {subtitle.gradient}
                 </span>
               </h2>
-              <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+              <p
+                className="
+    mx-auto 
+    text-gray-600 dark:text-gray-300 
+    max-w-md sm:max-w-lg md:max-w-2xl 
+    text-sm sm:text-base md:text-lg
+    px-4
+  "
+              >
                 {description}
               </p>
+
               <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                 <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
