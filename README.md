@@ -3,6 +3,10 @@
 A modern, scalable, and secure trading platform built with Next.js, Python (Django + FastAPI), and PostgreSQL, designed for real-time market data, interactive trading, and portfolio management.
 
 ---
+![HERO](./client/public/Hero.png)
+
+---
+---
 ![Architecture](image.png)
 
 ---
