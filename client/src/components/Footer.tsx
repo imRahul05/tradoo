@@ -3,6 +3,7 @@ import React from 'react';
 import { MinimalFooter } from "@/components/ui/minimal-footer";
 import { ArrowDownIcon } from 'lucide-react';
 import Lenis from 'lenis';
+import { TextHoverEffect } from './ui/text-hover-effect';
 
 export default function Footer() {
 
@@ -19,8 +20,11 @@ export default function Footer() {
 
     return (
 
-            <div>
-                < MinimalFooter />
+        <div>
+            < MinimalFooter />
+            <div className="h-[30rem] flex items-center justify-center">
+                <TextHoverEffect text="Tradoo" />
             </div>
-            );
-        }
+        </div>
+    );
+}

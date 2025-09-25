@@ -147,6 +147,7 @@ export function MinimalFooter() {
 					</p>
 				</div>
 			</div>
+			
 		</footer>
 	);
 }
