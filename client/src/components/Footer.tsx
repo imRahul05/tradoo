@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import { MinimalFooter } from "@/components/ui/minimal-footer";
-import { ArrowDownIcon } from 'lucide-react';
 import Lenis from 'lenis';
 import { TextHoverEffect } from './ui/text-hover-effect';
 
