@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/blocks/hero-section-dark";
+import Footer from "@/components/Footer";
 import { Nav } from "@/components/Nav";
 import { TradingBentoGrid } from "@/components/TradingBentoGrid";
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       />
 
       <TradingBentoGrid />
+    <Footer/>
     </div>
   );
 }
