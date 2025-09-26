@@ -20,7 +20,9 @@ export default function Footer() {
     return (
 
         <div>
+           
             < MinimalFooter />
+            
             <div className="h-[30rem] flex items-center justify-center">
                 <TextHoverEffect text="Tradoo" />
             </div>
